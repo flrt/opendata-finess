@@ -70,7 +70,7 @@ class Finess:
             {"desc": "Numero education nationale", "title": "numuai", "min": 8, "max": 8, "nillable": True}
         ]
         self.mapping = {'finess': (1, None),
-                        'name': (3, None), 'cp': (16, self.cutzipcode), 'dept': (16, self.cutdept),
+                        'name': (3, None), 'cp': (15, self.cutzipcode), 'dept': (15, self.cutdept),
                         'city': (15, self.cutcity), 'opened': (28, None),
                         'updated': (30, None)
                         }
@@ -162,7 +162,7 @@ class Finess:
         for k, v in self.errors_checked.items():
             if v["count"]>0:
                 self.logger.info(
-                    "Col {0:2d} -> {1:13s} = {2:32s} (min={3:2d}, max={4:2d}) : {5:8d} errors = {6:02.2f}%".format(
+                    "Col {0:2d} -> {1:13s} = {2:29s} (min={3:2d}, max={4:2d}) : {3:8d} errors = {6:02.2f}%".format(
                         k, self.finess_sch[k]["title"], self.finess_sch[k]["desc"],
                         self.finess_sch[k]["min"], self.finess_sch[k]["max"],
                         v["count"], (float(v["count"])/total_entities * 100)
