@@ -16,3 +16,11 @@ Le projet est composé de :
 
 Le projet sert de support au billet : [Analyse des données Finess publiées en Open Data](http://www.opikanoba.org/sante/finess_etalab)
 
+# Telechargement du fichier Finess via l'API
+Le script `down_finess.sh` permet le téléchargement du fichier de données Finess en utilisant l'[API data.gouv.fr](https://www.data.gouv.fr/fr/apidoc/).
+
+L'interêt et le fonctionnement est expliqué dans le billet : [Interrogation data.gouv.fr via son API](http://www.opikanoba.org/sante/finess_api).
+Il s'utilise simplement avec une date de référence. Cette date va être comparée avec la dernière date de mise à jour du fichier distant.
+Si une version plus récente du fichier est disponible, elle est telechargée.
+
+
